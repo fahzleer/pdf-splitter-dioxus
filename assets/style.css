@@ -1,0 +1,245 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    background: #f5f5f5;
+    color: #333;
+}
+
+.app {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 2rem;
+    min-height: 100vh;
+}
+
+.welcome-screen,
+.file-loaded-screen,
+.splitting-screen,
+.done-screen,
+.error-display,
+.image-setup-screen {
+    background: white;
+    border-radius: 12px;
+    padding: 2rem;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+h1, h2 {
+    margin-bottom: 1.5rem;
+    text-align: center;
+}
+
+.mode-selector {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    margin-bottom: 2rem;
+}
+
+.mode-btn {
+    background: #e0e0e0;
+    color: #333;
+    flex: 1;
+    max-width: 200px;
+}
+
+.mode-btn.active {
+    background: #007aff;
+    color: white;
+}
+
+.drop-zone {
+    border: 2px dashed #ccc;
+    border-radius: 12px;
+    padding: 3rem 2rem;
+    text-align: center;
+    transition: border-color 0.2s;
+}
+
+.drop-zone:hover {
+    border-color: #007aff;
+}
+
+.drop-zone-content {
+    font-size: 1.25rem;
+    margin-bottom: 1rem;
+}
+
+button {
+    background: #007aff;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    padding: 0.75rem 1.5rem;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+button:hover {
+    background: #005bb5;
+}
+
+.pdf-info {
+    font-size: 1.1rem;
+    margin-bottom: 1.5rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid #eee;
+}
+
+.config-panel {
+    margin-bottom: 1.5rem;
+}
+
+.config-panel label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+}
+
+.config-panel input[type="range"] {
+    width: 100%;
+    margin-bottom: 1rem;
+}
+
+.config-row {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+
+.config-row label {
+    min-width: 120px;
+    margin-bottom: 0;
+}
+
+.config-row select {
+    padding: 0.5rem;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+}
+
+.config-row input[type="radio"] {
+    margin-right: 0.25rem;
+}
+
+.chunk-preview {
+    margin-bottom: 1.5rem;
+}
+
+.chunk-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+    gap: 0.5rem;
+    margin-top: 0.5rem;
+}
+
+.chunk-item {
+    background: #f0f0f0;
+    padding: 0.5rem;
+    border-radius: 6px;
+    text-align: center;
+    font-size: 0.9rem;
+}
+
+.split-button {
+    width: 100%;
+    font-size: 1.1rem;
+    padding: 1rem;
+}
+
+.split-progress {
+    text-align: center;
+}
+
+.progress-bar-container {
+    background: #e0e0e0;
+    border-radius: 8px;
+    height: 24px;
+    overflow: hidden;
+    margin-bottom: 1rem;
+}
+
+.progress-bar {
+    background: #007aff;
+    height: 100%;
+    transition: width 0.3s;
+}
+
+.current-file {
+    color: #666;
+    font-size: 0.9rem;
+    margin-top: 0.5rem;
+}
+
+.chunk-status-list {
+    margin-top: 1.5rem;
+}
+
+.chunk-status {
+    padding: 0.5rem;
+    border-radius: 6px;
+    margin-bottom: 0.25rem;
+}
+
+.chunk-status.success {
+    background: #e8f5e9;
+    color: #2e7d32;
+}
+
+.chunk-status.error {
+    background: #ffebee;
+    color: #c62828;
+}
+
+.result-list {
+    margin-bottom: 1.5rem;
+}
+
+.result-item {
+    padding: 0.75rem;
+    background: #f8f8f8;
+    border-radius: 6px;
+    margin-bottom: 0.5rem;
+}
+
+.done-actions {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+}
+
+.error-display {
+    text-align: center;
+    color: #c62828;
+}
+
+.image-setup-screen {
+    text-align: center;
+}
+
+.image-list {
+    margin: 1.5rem 0;
+    text-align: left;
+    max-height: 300px;
+    overflow-y: auto;
+    border: 1px solid #eee;
+    border-radius: 8px;
+    padding: 1rem;
+}
+
+.image-item {
+    padding: 0.5rem;
+    border-bottom: 1px solid #f0f0f0;
+    font-size: 0.9rem;
+}
+
+.image-item:last-child {
+    border-bottom: none;
+}

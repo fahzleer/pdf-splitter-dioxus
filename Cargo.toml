@@ -1,0 +1,17 @@
+[package]
+name = "pdf-splitter-dioxus"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+dioxus = { version = "0.6", features = ["desktop"] }
+lopdf = "0.34"
+thiserror = "2"
+tokio = { version = "1", features = ["full"] }
+rfd = "0.14"
+printpdf = { version = "0.7", features = ["embedded_images"] }
+image = "0.24"
+
+[dev-dependencies]
+tempfile = "3"
+proptest = "1"
